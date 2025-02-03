@@ -1,0 +1,155 @@
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+
+        body {
+        font-family: 'Orbitron', sans-serif; /* Font Futuristik */
+        background: radial-gradient(circle at 50% 50%, rgba(30, 30, 47, 1) 0%, rgba(60, 60, 90, 1) 50%, rgba(10, 10, 30, 1) 100%);
+        color: #fff;
+        line-height: 1.6;
+        height: 100vh;
+        animation: fadeIn 1.5s ease-in-out;
+        background-size: cover;
+        background-attachment: fixed;
+        position: relative;
+        }
+
+        body::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.1) 50%, transparent 100%);
+        pointer-events: none;
+        z-index: 1;
+        animation: lightPulse 3s ease-in-out infinite;
+        }
+
+        @keyframes lightPulse {
+        0% {
+            opacity: 0.15;
+        }
+        50% {
+            opacity: 0.4;
+        }
+        100% {
+            opacity: 0.15;
+        }
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            margin: 10px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 600;
+        }
+        .card-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        }
+        .card h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #00ffcc;
+        }
+        form label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #fff;
+        }
+        form input, form textarea, form select {
+            padding: 10px;
+            width: 100%;
+            margin: 8px 0;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            font-size: 14px;
+        }
+        form button {
+            padding: 10px 20px;
+            background: #00ffcc;
+            color: #1e1e2f;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            width: 100%;
+            transition: background 0.3s ease;
+        }
+        form button:hover {
+            background: #00e6b8;
+        }
+        .notification {
+            padding: 15px;
+            background: #00ffcc;
+            color: #1e1e2f;
+            font-weight: bold;
+            text-align: center;
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            border-radius: 5px;
+            display: none;
+        }
+        .notification.show {
+            display: block;
+        }
+        .mini-navbar {
+            background-color: #f8f8f8;
+            color: #333;
+            padding: 5px 10px;      /* Mengurangi padding */
+            font-size: 14px;        /* Mengurangi ukuran font */
+            font-weight: bold;
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+            margin: 0;
+            }
+
+
+        .mini-navbar:hover {
+        background-color: #e0e0e0;
+        }
